@@ -76,7 +76,7 @@
 			text-align: center;
 			color: #FFFFFF;
 			opacity: 1;
-			transition: all ease 1s;
+			transition: all ease-out 1s;
 			font-family: monospace;
 		}
 		.container{
@@ -85,7 +85,7 @@
 			height: 100vh;
 		}
 		.myoverlay{
-			backdrop-filter: blur(7px);
+			backdrop-filter: blur(6px);
 		}
 	  	.mywindow{
 	  		background: #ECECEC;
@@ -99,7 +99,7 @@
 	  		
 	  	}
 	  	.myanimated{
-	  		transition: all ease 0.3s;
+	  		transition: all ease-out 0.3s;
 	  	}
 	  	.mycontrol{
 	  		position: absolute;
@@ -440,8 +440,8 @@
 					<div class="tanggal">-</div>
 					<div class="ucapan myoverlay" onclick="carigoogle()"><span id="spannama2"></span></div>	
 				</div>
-				<div class="shortcut kanan" onclick="toggleFullscreen()">fullscreen</div>
-				<div class="shortcut kiri" onclick="wpblur()">blur</div>
+				<div class="shortcut kanan" onclick="toggleFullscreen()">Fullscreen</div>
+				<div class="shortcut kiri" onclick="wpblur()">Blur</div>
 			</div>
 			<div class="mywindow" id="myform" style="width: 500px; height: 240px">
 				<div class="myheader">
@@ -449,7 +449,7 @@
 				</div>
 				<div class="mybody">
 					<div class="mytitle">
-						Isi identitas anda terlebih dahulu.
+						Isi identitas kamu terlebih dahulu.
 					</div>
 					<div class="mycontent">
 						Tekan tombol merah di pojok untuk reset nama.<br><br>
@@ -485,7 +485,7 @@
 				<div class="myresize"></div>
 			</div>
 		</div>
-		<span style="position: absolute; text-align: center; line-height: 100vh; width: 100vw; z-index:-10;">Ngapain ngubah copyright nya bos</span>
+		<span style="position: absolute; text-align: center; line-height: 100vh; width: 100vw; z-index:-10;">Ngapain utak atik bos ?</span>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	  	<script type="text/javascript">
 	  		/*
@@ -503,6 +503,7 @@
 				$('.preload').css('background','#00000000').css('color','#FFFFFF00').css('backdrop-filter','blur(0px)').text('Wes Mari').css('z-index','-2');
 			});
 	  		function init(){
+				color: black;
 	  			startTime();
 	  			stopOpening();
 	  			add='<div class="cc">Copyright FRIZZY ARDHANI @2021</div>';
@@ -759,13 +760,13 @@
 				var today = new Date();
 				var h = today.getHours();
 				if(h>23)tulis('malam','seharusnya kamu sudah tidur');
-				else if(h>19)tulis('malam','waktunya mengisi energi');
-				else if(h>18)tulis('petang','selamat menikmati senja');
-				else if(h>14)tulis('sore','selamat menjalani hari');
-				else if(h>13)tulis('siang','tetap semangat')
-				else if(h>9)tulis('siang','selamat bekerja')
-				else if(h>4)tulis('pagi','selamat beraktivitas');
-				else tulis('malam','seharusnya kamu sudah tidur');
+				else if(h>19)tulis('Malam','waktunya mengisi energi');
+				else if(h>18)tulis('Petang','selamat menikmati senja');
+				else if(h>14)tulis('Sore','selamat menjalani hari');
+				else if(h>13)tulis('Siang','tetap semangat')
+				else if(h>9)tulis('Siang','selamat bekerja')
+				else if(h>4)tulis('Pagi','selamat beraktivitas');
+				else tulis('Malam','seharusnya kamu sudah tidur');
 				selesai=true;
 			}
 			function resetposisi(){
@@ -798,14 +799,14 @@
 				var t = setTimeout(startTime, 500);
 				mytanggal();
 				if(cari){
-					if(h>23)tulis('malam','seharusnya kamu sudah tidur');
+					if(h>23)tulis('Malam','seharusnya kamu sudah tidur');
 					else if(h>18)tulis('Malam','waktunya mengisi energi');
 					else if(h>17)tulis('Petang','selamat menikmati senja');
 					else if(h>14)tulis('Sore','selamat menjalani hari');
 					else if(h>13)tulis('Siang','tetap semangat')
 					else if(h>9)tulis('Siang','selamat bekerja')
 					else if(h>4)tulis('Pagi','selamat beraktivitas');
-					else tulis('malam','seharusnya kamu sudah tidur');
+					else tulis('Malam','seharusnya kamu sudah tidur');
 					if(h>18)     document.querySelector('img').src="wp1.png";
 					else if(h>4) document.querySelector('img').src="wp2.png";
 					else         document.querySelector('img').src="wp1.png";
